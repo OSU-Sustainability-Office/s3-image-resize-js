@@ -28,12 +28,7 @@ let main = async () => {
       }))).Body
       let jImage = await Jimp.read(imageData)
       jImage.cover(400,266)
-      // let rData = await (new Promise((resolve, reject) => {
-      //   jImage.getBase64(Jimp.AUTO, (err, data) => {
-      //     if (err) reject(err)
-      //     else resolve(data)
-      //   })
-      // }))
+
       let rData = await jImage.getBufferAsync(Jimp.MIME_JPEG)
       await (new Promise((resolve, reject) => {
         const uploadParams = {
