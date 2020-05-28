@@ -1,0 +1,4 @@
+.env
+thumbnails/
+reducedSize/
+node_modules/
